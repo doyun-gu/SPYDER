@@ -1,0 +1,11 @@
+Parameter	Value
+Weight	9g
+Dimension	23×12.2x27mm
+Stall torque	2.5kg /cm(4.8v)
+Gear type	POM with carbon fiber
+Operating speed	0.1sec /60degree (4.8v)
+Operating voltage	4.8v
+Temperature range	0°C_ 55°C
+Dead band width	1us
+Servo wire length	25 cm
+Servo Plug	JR (Fits JR and Futaba)
