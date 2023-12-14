@@ -28,9 +28,14 @@ class ServoDriver:
         return int(min_duty + (max_duty - min_duty) * angle / 180)
 
 # Example usage
-servo0 = ServoDriver(0, 1)  # Channel 0 - GPIO 1
+servo0 = ServoDriver(0, 0)  # Channel 0 - GPIO 1
 
-for angle in range(0, 45, 1):  # Test with a wider range and bigger steps
+for angle in range(0, 90, 1):  # Test with a wider range and bigger steps
     print("Setting angle to:", angle)
     servo0.set_angle(angle)
     time.sleep(0.01)  # Increase delay to observe the movement
+
+for angle in range(90, 0, -1):
+    print("Setting back angle to:", angle)
+    servo0.set_angle(angle)
+    time.sleep(0.01)
