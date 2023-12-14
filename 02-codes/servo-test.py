@@ -27,8 +27,8 @@ class ServoDriver:
 
         return int(min_duty + (max_duty - min_duty) * angle / 180)
 
-    """
-    pins = """        ---usb---
+"""
+        ---usb---
 GP0  1  |o     o| -1  VBUS
 GP1  2  |o     o| -2  VSYS
 GND  3  |o     o| -3  GND
