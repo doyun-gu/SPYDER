@@ -1,10 +1,11 @@
-from machine import Pin, PWM
+# from machine import Pin, PWM
+import machine
 import time
 
 class ServoDriver:
     def __init__(self, channel, pin_number):
         self.channel = channel
-        self.pwm = PWM(Pin(pin_number))
+        self.pwm = machine.PWM(machine.Pin(pin_number))
         self.pwm.freq(50)  # Set frequency to 50 Hz
 
     def set_angle(self, angle):
@@ -26,6 +27,35 @@ class ServoDriver:
         #max_duty = 9000
 
         return int(min_duty + (max_duty - min_duty) * angle / 180)
+    
+class Movement:
+    def __init__(self, num_servos):
+        self.servos = [ServoDriver(i, i) for i in range(num_servos)]
+    
+    def reset(self, angle):
+        for servo in self.servos:
+            servo.set_angle(angle)
+            time.sleep(0.005)
+
+    def forward(self):
+        forward_servos = []
+
+class Measurement:
+    def __init__(self):
+        self.adcpin = 4
+        self.sensor = machine.ADC(self.adcpin)
+
+    def read_temperature(self):
+        adc_value = self.sensor.read_u16()
+        volt = (3.3 / 65535) * adc_value
+        temperature = 27 - (volt - 0.706) / 0.001721
+        return round(temperature, 1)
+
+    def start_measurement(self):
+        while True:
+            temperature = self.read_temperature()
+            print(temperature)
+            time.sleep(5)
     
 """
         ---usb---
@@ -53,6 +83,7 @@ GP15 20 |o     o| -20 GP16
 
 # Create an array of servo objects
 servos = []
+
 for i in range(18): # number of servo objects to create
     servos.append(ServoDriver(i, i))  # Channel i - GPIO i
 
@@ -63,23 +94,23 @@ for thtime in range (0, 21, 1):
     print("increment")
     for angle in range(0, 90, 1):  # Test with a wider range and bigger steps
         #print("Setting angle to:", angle)
-        servos[0].set_angle(angle)
+        servos[2].set_angle(angle)
         time.sleep(0.005)  # Increase delay to observe the movement
 
     print("decrement")
     for angle in range(90, 0, -1):
         #print("Setting back angle to:", angle)
-        servos[0].set_angle(angle)
+        servos[2].set_angle(angle)
         time.sleep(0.005)
 
     print("increment")
     for angle in range(0, 90, 1):  # Test with a wider range and bigger steps
         #print("Setting angle to:", angle)
-        servos[0].set_angle(angle)
+        servos[2].set_angle(angle)
         time.sleep(0.005)  # Increase delay to observe the movement
 
     print("decrement")
     for angle in range(90, 0, -1):
         #print("Setting back angle to:", angle)
-        servos[0].set_angle(angle)
+        servos[2].set_angle(angle)
         time.sleep(0.005)
