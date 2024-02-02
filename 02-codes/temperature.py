@@ -1,33 +1,23 @@
 import machine
 import time
 
-# Initialize the temperature sensor
-temp_sensor = machine.ADC(4) 
+class Measurement:
+    def __init__(self):
+        self.adcpin = 4
+        self.sensor = machine.ADC(self.adcpin)  # Ensure the ADC pin is correctly assigned
 
-# Initialize the LED (replace 'LED_PIN' with your actual LED pin number)
-led = machine.Pin("LED", machine.Pin.OUT)
+    def read_temperature(self):
+        # Read the ADC value and calculate temperature
+        adc_value = self.sensor.read_u16()
+        volt = (3.3 / 65535) * adc_value
+        temperature = 27 - (volt - 0.706) / 0.001721
+        return round(temperature, 1)
 
-def read_temperature():
-    # Read raw value
-    raw_value = temp_sensor.read_u16()
-    # Convert to temperature (adjust this formula according to your sensor)
-    temperature = 27 - (raw_value - 6731) / 184.33
-    return temperature
+    def start_measurement(self):
+        while True:
+            temperature = self.read_temperature()
+            print(temperature)
+            time.sleep(0.5)  # Wait for 5 seconds before the next read
 
-# Function to check and print temperature only if it changes
-def check_and_print_temperature(last_temp):
-    current_temp = read_temperature()
-    if current_temp != last_temp:
-        print("Temperature:", current_temp, "C")
-        led.on()  # Turn on LED when the temperature is printed
-        time.sleep(0.5)  # Keep LED on for a short duration
-        led.off()
-    return current_temp
-
-# Initialize last temperature
-last_temperature = None
-
-# Main loop
-while True:
-    last_temperature = check_and_print_temperature(last_temperature)
-    time.sleep(1)
+measurement = Measurement()
+measurement.start_measurement()  # Corrected method call
