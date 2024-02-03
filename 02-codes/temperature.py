@@ -5,6 +5,7 @@ class Measurement:
     def __init__(self):
         self.adcpin = 4
         self.sensor = machine.ADC(self.adcpin)  # Ensure the ADC pin is correctly assigned
+        self.last_temperature = None  # Initialize last temperature
 
     def read_temperature(self):
         # Read the ADC value and calculate temperature
@@ -13,11 +14,17 @@ class Measurement:
         temperature = 27 - (volt - 0.706) / 0.001721
         return round(temperature, 1)
 
-    def start_measurement(self):
+    def update_measurement(self):
         while True:
-            temperature = self.read_temperature()
-            print(temperature)
-            time.sleep(0.5)  # Wait for 5 seconds before the next read
+            current_temperature = self.read_temperature()
+            # Print every 5 seconds only if there's a change in temperature
+            if self.last_temperature is None or current_temperature != self.last_temperature:
+                variance = current_temperature - self.last_temperature if self.last_temperature is not None else 0
+                print(f"Past Temperature: {self.last_temperature if self.last_temperature is not None else 'N/A'}")
+                print(f"Current Temperature: {current_temperature}")
+                print(f"Variance: {round(variance, 1)}")
+                self.last_temperature = current_temperature
+            time.sleep(5)  # Adjust to sleep for 5 seconds before the next read
 
 measurement = Measurement()
-measurement.start_measurement()  # Corrected method call
+measurement.update_measurement()
