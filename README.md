@@ -1,7 +1,11 @@
 # Spyder-six-sense
 
-## This is the Page for SPYDER Robot by ROBOSOC SixSenses Team.
-ROBOSOC Group Projects
+## About this Project
+This project is ROBOSOC based Group Project which is the University of Manchester Robotic Society.
+
+Our Group title is SixSenses as we have six different types of sensors.
+
+We will use the Raspberry Pi pico W microcontroller.
 
 Hello Welcome to the Group: Six-Senses Project Page!
 
