@@ -1,5 +1,4 @@
 # Spyder-six-sense
-<<<<<<< doyun-home
 ROBOSOC Group Projects
 
 ## About this Project
@@ -26,6 +25,4 @@ More information can be found easily on the internet and I have uploaded the fir
 For other types of microcontroller, you should find the corresponding microcontroller and upload it.
 
 Please see the link below:
->https://micropython.org/download/
-
-
+> https://micropython.org/download/
