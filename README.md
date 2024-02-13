@@ -1,17 +1,10 @@
 # Spyder-six-sense
-<<<<<<< HEAD
-
 ## About this Project
 This project is ROBOSOC based Group Project which is the University of Manchester Robotic Society.
 
 Our Group title is SixSenses as we have six different types of sensors.
 
 We will use the Raspberry Pi pico W microcontroller.
-=======
-<<<<<<< doyun-home
-ROBOSOC Group Projects
-=======
->>>>>>> doyun-home
 
 ## About this Project
 This project is ROBOSOC based Group Project which is the University of Manchester Robotic Society.
@@ -19,7 +12,6 @@ This project is ROBOSOC based Group Project which is the University of Mancheste
 Our Group title is SixSenses as we aims to use six different types of sensors.
 
 This robot will be used to geather the data and analyse them where human would hesistate to be.
->>>>>>> local
 
 We will use the Raspberry Pi pico W microcontroller and code with micropython.
 
@@ -29,7 +21,6 @@ test git pull and push
 
 ![Spider Design](https://github.com/doyun-gu/SPYDER/assets/128914278/4de50b91-f7b9-4c4d-a30a-c7b7dd0d9960)
 ![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
-<<<<<<< doyun-home
 =======
 
 ## Micropython
@@ -42,4 +33,3 @@ For other types of microcontroller, you should find the corresponding microcontr
 
 Please see the link below:
 >https://micropython.org/download/
->>>>>>> local
