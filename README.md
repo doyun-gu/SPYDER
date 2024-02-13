@@ -17,8 +17,7 @@ However, C are used in some case for the basic components settings.
 
 test git pull and push
 
-![Spider Design](https://github.com/doyun-gu/SPYDER/assets/128914278/4de50b91-f7b9-4c4d-a30a-c7b7dd0d9960)
-![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
+
 <<<<<<< doyun-home
 =======
 
@@ -32,4 +31,8 @@ For other types of microcontroller, you should find the corresponding microcontr
 
 Please see the link below:
 >https://micropython.org/download/
+
+
+![Spider Design](https://github.com/doyun-gu/SPYDER/assets/128914278/4de50b91-f7b9-4c4d-a30a-c7b7dd0d9960)
+![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
 >>>>>>> local
