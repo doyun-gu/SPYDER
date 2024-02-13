@@ -1,25 +1,21 @@
 # Spyder-six-sense
 <<<<<<< doyun-home
 ROBOSOC Group Projects
-=======
 
 ## About this Project
+![Spider Design](https://github.com/doyun-gu/SPYDER/assets/128914278/4de50b91-f7b9-4c4d-a30a-c7b7dd0d9960)
+![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
+
 This project is ROBOSOC based Group Project which is the University of Manchester Robotic Society.
 
 Our Group title is SixSenses as we aims to use six different types of sensors.
 
 This robot will be used to geather the data and analyse them where human would hesistate to be.
->>>>>>> local
+
 
 We will use the Raspberry Pi pico W microcontroller and code with micropython.
 
 However, C are used in some case for the basic components settings. 
-
-test git pull and push
-
-
-<<<<<<< doyun-home
-=======
 
 ## Micropython
 Micropython has exactly same features as python. Just consider it as python which can interact with the hardware components.
@@ -33,6 +29,3 @@ Please see the link below:
 >https://micropython.org/download/
 
 
-![Spider Design](https://github.com/doyun-gu/SPYDER/assets/128914278/4de50b91-f7b9-4c4d-a30a-c7b7dd0d9960)
-![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
->>>>>>> local
