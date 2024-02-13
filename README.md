@@ -23,9 +23,9 @@ test git pull and push
 ![Spider Schematic Top View](https://github.com/doyun-gu/SPYDER/assets/128914278/429366fc-0fdc-487c-ba20-b93adb9a900c)
 =======
 
-[!IMPORTANT]
-## Micropython
-**Micropython** has exactly same features as python. Just consider it as python which can interact with the hardware components.
+>[!IMPORTANT]
+>## Micropython
+>**Micropython** has exactly same features as python. Just consider it as python which can interact with the hardware components.
 
 Before micropython starts, **micropython firmware** for the raspberry pi pico W must be uploaded to the board first so that it can read the code.
 
