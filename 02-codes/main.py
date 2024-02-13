@@ -115,5 +115,4 @@ for thtime in range (0, 21, 1):
         servos[2].set_angle(angle)
         time.sleep(0.005)
 
-# test
-# test window "any comment"
+
