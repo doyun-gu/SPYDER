@@ -54,12 +54,9 @@ GP15 20 |o     o| -20 GP16
 # Example usage
 servo0 = ServoDriver(0, 0)  # Channel 0 - GPIO 0
 
-for angle in range(0, 90, 1):  # Test with a wider range and bigger steps
-    print("Setting angle to:", angle)
-    servo0.set_angle(angle)
-    time.sleep(0.01)  # Increase delay to observe the movement
+while 1:
 
-for angle in range(90, 0, -1):
-    print("Setting back angle to:", angle)
-    servo0.set_angle(angle)
-    time.sleep(0.01)
+    for angle in range(0, 90, 1):  # Test with a wider range and bigger steps
+        print("Setting angle to:", angle)
+        servo0.set_angle(angle)
+        time.sleep(0.01)  # Increase delay to observe the movement
